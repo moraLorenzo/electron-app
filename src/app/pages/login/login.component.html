@@ -1,0 +1,47 @@
+<div class="container vertical-center">
+    <div class="row">  
+            <div class="col">  
+                <p-card>
+                    <form class="form-login" [formGroup]="loginForm"  ngNativeValidate (ngSubmit)="submit()">
+                        <div id="greet" style="text-align: center;" class="d-flex">
+                            <h4>Halloween Special</h4>
+                        </div>
+
+                        <div class="input-container between">
+                            <label for="email">Enter Email below</label>
+                            <br>
+                            <input type="text" id="email" formControlName="email" aria-describedby="email" class="p-invalid email-m" placeholder="sample@gmail.com" pInputText>
+                        
+                            <small *ngIf="!loginForm.controls['email'].valid" style="margin-top: 1%">
+                                <p-message severity="error"  text="Invalid Email" styleClass="p-mr-2"></p-message>
+                            </small>
+                        </div>
+                        
+                        <br>
+                        <div class="input-container between">
+                            <label for="pass">Enter Password below</label>
+                            <br>
+                            <input type="password" id="pass" formControlName="password" aria-describedby="email" class="p-invalid pass-m" placeholder="XxYyZz" pInputText>
+                            <small *ngIf="!loginForm.controls['password'].valid">
+                                <p-message severity="error"  text="Invalid Password" styleClass="p-mr-2"></p-message>
+                            </small>
+                        </div>     
+                        <br>          
+                        <div class="flex justify-content-center">
+                            
+                            <p-button label="Login" type="submit" styleClass="p-button-lg" class="cyp-btn btn" [disabled]="!loginForm.valid"></p-button>
+                         
+                        </div>
+                    </form>
+                    <ng-template pTemplate="footer">
+                        ver {{version}}
+                    </ng-template>
+                </p-card>
+            </div>
+            <div class="col">
+                <img src="assets/svg/theme.png" alt="Icon" style="width: 50%;">
+            
+            </div>
+            <p-messages [(value)]="msgs" [enableService]="false"></p-messages>
+    </div>
+  </div>

@@ -1,0 +1,71 @@
+.sizes {
+  .p-inputtext {
+      display: block;
+      margin-bottom: .5rem;
+      &:last-child {
+          margin-bottom: 0;
+      }
+  }
+}
+
+.p-field * {
+  display: block;
+}
+
+.container{
+  display: flex;
+  width: 100%;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  #greet{
+      text-align: center;
+  }
+
+  .between{
+      margin-left: 10%;
+
+      .email-m{
+     
+          margin-bottom: 1%;
+      }
+      .pass-m{
+          margin-bottom: 1%;
+      }
+      small{
+          margin-left: 2%;
+      }
+  }
+
+  img{
+      margin-left: 25%;
+      margin-top: 5%;
+      width: 25%;
+  }
+}
+
+:host ::ng-deep .p-button{
+  width: 300px;
+  margin-left: 25%;
+}
+
+:host ::ng-deep .p-card{
+  margin-left: 25%;
+}
