@@ -14,12 +14,8 @@ const createWindow = () => {
     },
   });
 
-  // win.loadURL(
-  //   isDev ? "http://localhost:4200" : `file://${path.join(__dirname, "dist/electron-app/index.html")}`
-  // );
-
   win.loadFile(path.join(__dirname, 'dist/electron-app/index.html'))
-
+  console.log("is Dev? ", isDev);
   if(isDev){
     win.webContents.openDevTools({mode: "detach"});
     // require()
